@@ -6,8 +6,9 @@
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "strictPropertyInitialization": false,
     "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
+    "noFallthroughCasesInSwitch": true, //resolver problemas das model sem construtor, nao solicita iniciaalizadao dos atributos //
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
