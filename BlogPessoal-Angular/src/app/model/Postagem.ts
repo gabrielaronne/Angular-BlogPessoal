@@ -1,5 +1,5 @@
 import { tema } from "./Tema"
-import { Usuario } from "./Usuarios"
+import { Usuario } from "./Usuario"
 
 export class postagem{
 public id:number
