@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
-import { tema } from '../model/Tema';
+import { Tema } from '../model/Tema';
 import { TemaService } from '../service/tema.service';
 
 @Component({
@@ -11,8 +11,8 @@ import { TemaService } from '../service/tema.service';
 })
 export class TemaComponent implements OnInit {
 
-  tema1:tema=  new tema()
-  listaTemas:tema[]
+  tema:Tema=  new Tema()
+  listaTemas:Tema[]
   
   
   constructor(
@@ -28,7 +28,7 @@ export class TemaComponent implements OnInit {
   }
 
   findAllTemas(){
-    this.temaService.getAllTema().subscribe(( resp : tema[])=>{
+    this.temaService.getAllTema().subscribe(( resp : Tema[])=>{
    this.listaTemas=resp
 
 
@@ -37,11 +37,11 @@ export class TemaComponent implements OnInit {
   
   
   Cadastrar(){
-    this.temaService.postTema(this.tema1).subscribe((resp: tema)=>{
-   this.tema1=resp
+    this.temaService.postTema(this.tema).subscribe((resp: Tema)=>{
+   this.tema=resp
    alert('tema cadastrado com sucesso')
    this.findAllTemas()
-   this.tema1=new tema()
+   this.tema=new Tema()
     })
 
 

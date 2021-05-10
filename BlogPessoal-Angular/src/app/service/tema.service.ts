@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { observable, Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
-import { tema } from '../model/Tema';
+import { Tema } from '../model/Tema';
 
 @Injectable({
   providedIn: 'root'
@@ -15,21 +15,21 @@ export class TemaService {
  }
 
 
-getAllTema():Observable<tema[]> {
-return this.http.get<tema[]>('http://localhost:8080/tema')
+getAllTema():Observable<Tema[]> {
+return this.http.get<Tema[]>('http://localhost:8080/tema')
 }
 
-getByIdTema(id:number): Observable<tema> {
-return this.http.get<tema>(`http://localhost:8080/tema/${id}`,this.token)
+getByIdTema(id:number): Observable<Tema> {
+return this.http.get<Tema>(`http://localhost:8080/tema/${id}`,this.token)
 }
 
 
-postTema (tema1:tema):Observable<tema>{
-  return this.http.post<tema>('http://localhost:8080/tema',tema1,this.token)
+postTema (tema:Tema):Observable<Tema>{
+  return this.http.post<Tema>('http://localhost:8080/tema',tema,this.token)
 }
 
-putTema(tema1:tema):Observable<tema>{
-return this.http.put<tema>('http://localhost:8080/tema',tema1,this.token)
+putTema(tema:Tema):Observable<Tema>{
+return this.http.put<Tema>('http://localhost:8080/tema',tema,this.token)
 }
 
 deleteTema(id:number) {

@@ -1,7 +1,7 @@
-import { postagem } from "./Postagem"
+import { Postagem } from "./Postagem"
 
-export class tema{
+export class Tema{
     public id :number
     public descricao:string
-    public postagem:postagem[]
+    public postagem:Postagem[]
 }
