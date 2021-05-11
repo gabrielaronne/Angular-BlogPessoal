@@ -18,6 +18,7 @@ export class InicioComponent implements OnInit {
  postagem : Postagem = new Postagem()
  listaPostagens:Postagem[]
  tema:Tema = new Tema
+ 
 listaTemas:Tema[]
 idTema:number
 
@@ -63,9 +64,8 @@ findByIdUser(){
   this.authService.getByIdUser(this.idUser).subscribe((resp:Usuario)=>{
  this.usuario=resp
   })
-
-
 }
+
 
 
 publicar(){
