@@ -1,34 +1,35 @@
-<nav class="navbar navbar-dark bg-info">
+<nav class="navbar navbar-expand-lg navbar-dark bg-info">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
-        aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-        <span class="navbar-toggler-icon"></span>
+      aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+      <span class="navbar-toggler-icon"></span>
     </button>
-
+  
     <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-        
-        <ul class="navbar-nav mr-auto d-flex align-items-center ">
-            <li class="nav-item active">
-                <img src="{{foto}}"
-                    alt="imagem do usuario" width="50px" height="50px" class="img-fluid rounded-circle">
-            </li>
-
-            <li class="nav-item pl-3">
-                <p class="m-0 font-weight-bold fs-16 "> Ola, {{nome}} </p>
-            </li>
-
-            <li class="nav-item pl-3">
-                <a href="">
-                    <P class=" fs-16 m-0 cl-black"> <i class="fa fa-pencil-square-o fs-16" aria-hidden="true"></i> </P>
-                </a>
-            </li>
-
-        </ul>
-        <ul class="navbar-nav ml-auto d-flex align-items-center ">
-            <li class="nav-item pl-3">
-                <a (click)='sair()' class="m-0 font-weight-bold fs-16 cl-black  ">sair <i class="fa fa-sign-out" aria-hidden="true"></i>
-                </a>
-            </li>
-        </ul>
-
+      <ul class="navbar-nav mr-auto d-flex align-items-center">
+        <li class="nav-item">
+          <img class="rounded-circle img-fluid" src="{{foto}}" width="50px" height="50px" alt="">
+        </li>
+  
+        <li class="nav-item pl-3">
+          <p class="m-0 font-weight-bold fs-16 text-white" id="nomeUser">Olá, {{nome}}</p>
+        </li>
+  
+        <li class="nav-item pl-3">
+          <a class="fs-16 text-white" [routerLink]="['/user-edit', id]">
+            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+          </a>
+        </li>
+  
+  
+  
+  
+      </ul>
+  
+      <ul class="navbar-nav ml-auto">
+        <li>
+          <a class="text-white fs-16" (click)='sair()'>Sair <i class="fa fa-sign-out" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
     </div>
-</nav>
+  </nav>
