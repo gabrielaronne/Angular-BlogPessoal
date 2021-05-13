@@ -26,6 +26,9 @@ idTema:number
 usuario:Usuario = new Usuario
 idUser = environment.id
 
+key ='data'
+reverse = true
+
 
 
   constructor(
